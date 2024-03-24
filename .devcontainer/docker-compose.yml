@@ -10,6 +10,7 @@ services:
         # Append -bullseye or -buster to pin to an OS version.
         # Use -bullseye variants on local arm64/Apple Silicon.
         # https://hub.docker.com/_/microsoft-devcontainers-python
+        # had to go with 3.10 bc of a conflict with numba
         VARIANT: 3.10-bookworm
         # Optional Node.js version to install
         NODE_VERSION: "lts/*"
