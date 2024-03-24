@@ -14,7 +14,10 @@ RUN useradd postgres
 # COPY requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install \
     psycopg2-binary \
-    thingvision \
+    pgvector \
+    pyarrow \
+    thingsvision \
+    InstructorEmbedding \
     beautifulsoup4 \
     pandas
 
