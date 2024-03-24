@@ -14,11 +14,11 @@ RUN useradd postgres
 # COPY requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install \
     psycopg2-binary \
-    torch \
+    thingvision \
     beautifulsoup4 \
     pandas
 
-#    && rm -rf /tmp/pip-tmp
+RUN pip3  pip3 --disable-pip-version-check --no-cache-dir install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 
 
