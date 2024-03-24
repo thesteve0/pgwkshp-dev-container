@@ -21,7 +21,7 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install \
     beautifulsoup4 \
     pandas
 
-RUN pip3  pip3 --disable-pip-version-check --no-cache-dir install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip3 --disable-pip-version-check --no-cache-dir install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 
 
