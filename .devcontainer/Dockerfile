@@ -1,5 +1,5 @@
 # [Choice] Python version (use -bullseye variants on local arm64/Apple Silicon): 3, 3.10, 3.9, 3.8, 3.7, 3.6, 3-bullseye, 3.10-bullseye, 3.9-bullseye, 3.8-bullseye, 3.7-bullseye, 3.6-bullseye, 3-buster, 3.10-buster, 3.9-buster, 3.8-buster, 3.7-buster, 3.6-buster
-ARG VARIANT=bookworm
+ARG VARIANT=3.10-bookworm
 FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 
 ENV PYTHONUNBUFFERED 1
@@ -29,7 +29,9 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install torch torchvision to
  RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends  \
       postgresql-client \
-      nano 
+      nano \
+    && apt-get clean && \
+       rm -rf /var/lib/apt/lists/*
 
 
 
