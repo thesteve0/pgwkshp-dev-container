@@ -19,7 +19,8 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install \
     thingsvision \
     InstructorEmbedding \
     beautifulsoup4 \
-    pandas
+    pandas \
+    openai-clip
 
 RUN pip3 --disable-pip-version-check --no-cache-dir install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
